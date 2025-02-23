@@ -1,109 +1,144 @@
 .contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80rem;
+  margin: 0 auto;
+  padding: 1.25rem; /* 20px */
+  color: #ffffff; /* Assurez-vous que cette couleur correspond à celle de vos autres pages */
+
+  h1 {
+    margin-bottom: 3rem; /* 20px */
+  }
+
+  .contact-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80rem;
-    margin: 0 auto;
-    padding: 1.25rem; /* 20px */
-    color: #ffffff; /* Assurez-vous que cette couleur correspond à celle de vos autres pages */
-  
-    h1 {
-      margin-bottom: 3rem; /* 20px */
+    width: 100%;
+    justify-content: space-between;
+
+    .contact-info,
+    form {
+      margin-top: 1rem;
+      flex: 1;
+      padding: 1.25rem; /* 20px */
+      /* Assurez-vous que cette couleur correspond à celle de vos autres pages */
+      border-radius: 0.5rem; /* 8px */
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* 2px 4px */
+      margin-right: 1.25rem; /* 20px */
+      height: 100%; /* Faire en sorte que la zone de texte fasse la même taille que le formulaire */
     }
-  
-    .contact-content {
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-  
-      .contact-info,
-      form {
-        margin-top: 1rem;
-        flex: 1;
-        padding: 1.25rem; /* 20px */
-        /* Assurez-vous que cette couleur correspond à celle de vos autres pages */
-        border-radius: 0.5rem; /* 8px */
-        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* 2px 4px */
-        margin-right: 1.25rem; /* 20px */
-        height: 100%; /* Faire en sorte que la zone de texte fasse la même taille que le formulaire */
+
+    .contact-info {
+      margin-right: 1.25rem; /* 20px */
+      
+
+      h2 {
+        margin-bottom: 1rem; /* 16px */
       }
-  
-      .contact-info {
-        margin-right: 1.25rem; /* 20px */
-        
-  
-        h2 {
-          margin-bottom: 1rem; /* 16px */
-        }
-  
-        p {
-          margin-bottom: 1rem; /* 16px */
-        }
-  
-        .contact-details {
+
+      p {
+        margin-bottom: 1rem; /* 16px */
+      }
+
+      .contact-details {
+        margin-bottom: 2rem; /* 16px */
+
+        .detail {
           margin-bottom: 2rem; /* 16px */
-  
-          .detail {
-            margin-bottom: 2rem; /* 16px */
-          }
-        }
-      }
-  
-      form {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-  
-        .form-group {
-          margin-bottom: 1rem; /* 16px */
-  
-          label {
-            display: block;
-            margin-bottom: 0.5rem; /* 8px */
-          }
-  
-          input,
-          textarea {
-            width: 100%;
-            padding: 0.625rem; /* 10px */
-            border: 1px solid #ccc;
-            border-radius: 0.25rem; /* 4px */
-            font-size: 1rem; /* 16px */
-            box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-          }
-  
-          textarea {
-            resize: vertical;
-            height: 200px; /* Ajustez cette valeur pour la hauteur de la zone de texte */
-          }
-        }
-  
-        .error-message {
-          color: red;
-          margin-bottom: 1rem; /* 16px */
-        }
-  
-        button {
-            margin-top: 1rem;
-          padding: 0.75rem; /* 12px */
-          border: none;
-          border-radius: 0.25rem; /* 4px */
-          background-color: #ccc; /* Assurez-vous que cette couleur correspond à celle de vos autres pages */
-          color: black;
-          font-size: 1rem; /* 16px */
-          cursor: none;
-          transition: background-color 0.3s;
-  
-          &:hover {
-            background-color: white;
-            color: black;
-            font-weight: bold;
-          }
         }
       }
     }
-  
-    .spacer {
-      height: 30rem; /* Ajustez cette valeur pour créer un espace vide en dessous du formulaire et de la zone de texte */
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .form-group {
+        margin-bottom: 1rem; /* 16px */
+
+        label {
+          display: block;
+          margin-bottom: 0.5rem; /* 8px */
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          padding: 0.625rem; /* 10px */
+          border: 1px solid #ccc;
+          border-radius: 0.25rem; /* 4px */
+          font-size: 1rem; /* 16px */
+          box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+        }
+
+        textarea {
+          resize: vertical;
+          height: 200px; /* Ajustez cette valeur pour la hauteur de la zone de texte */
+        }
+      }
+
+      .error-message {
+        color: red;
+        margin-bottom: 1rem; /* 16px */
+      }
+
+      button {
+          margin-top: 1rem;
+        padding: 0.75rem; /* 12px */
+        border: none;
+        border-radius: 0.25rem; /* 4px */
+        background-color: #ccc; /* Assurez-vous que cette couleur correspond à celle de vos autres pages */
+        color: black;
+        font-size: 1rem; /* 16px */
+        cursor: none;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: white;
+          color: black;
+          font-weight: bold;
+        }
+      }
     }
   }
+
+  .spacer {
+    height: 30rem; /* Ajustez cette valeur pour créer un espace vide en dessous du formulaire et de la zone de texte */
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    width: 100%;
+    padding: 1rem;
+
+    .contact-content {
+      flex-direction: column;
+
+      .contact-info,
+      form {
+        margin-right: 0;
+        margin-bottom: 1.25rem; /* 20px */
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 10px;
+    h1 {
+      font-size: 1.5em;
+    }
+    form {
+      input,
+      textarea {
+        font-size: 0.9em;
+      }
+      button {
+        font-size: 0.9em;
+      }
+    }
+  }
+}

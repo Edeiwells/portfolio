@@ -1,90 +1,132 @@
 .about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80rem;
+  margin: 0 auto;
+  padding: 2rem; /* 32px */
+  color: #ffffff;
+
+  .intro {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 80rem;
-    margin: 0 auto;
-    padding: 2rem; /* 32px */
-    color: #ffffff;
-  
-    .intro {
-      display: flex;
-      align-items: center;
-      margin-bottom: 2rem; /* 32px */
-  
-      img {
-        width: 50rem; /* Ajustez cette valeur pour réduire la taille de l'image */
-        height: 50rem; /* Ajustez cette valeur pour réduire la taille de l'image */
-        border-radius: 15px;
-        margin-right: 2rem; /* 32px */
+    margin-bottom: 2rem; /* 32px */
+
+    img {
+      width: 50rem; /* Ajustez cette valeur pour réduire la taille de l'image */
+      height: 50rem; /* Ajustez cette valeur pour réduire la taille de l'image */
+      border-radius: 15px;
+      margin-right: 2rem; /* 32px */
+    }
+
+    .description {
+      h1 {
+        margin-bottom: 1rem; /* 16px */
       }
-  
-      .description {
-        h1 {
-          margin-bottom: 1rem; /* 16px */
+
+      p {
+        margin: 0;
+        font-size: 1.25rem; /* 20px */
+      }
+    }
+  }
+
+  .experiences {
+    width: 100%;
+    margin-bottom: 2rem; /* 32px */
+
+    h2 {
+      margin-bottom: 1rem; /* 16px */
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 1.5rem; /* 24px */
+
+        h3 {
+          margin: 0 0 0.5rem 0; /* 8px */
         }
-  
+
         p {
           margin: 0;
-          font-size: 1.25rem; /* 20px */
-        }
-      }
-    }
-  
-    .experiences {
-      width: 100%;
-      margin-bottom: 2rem; /* 32px */
-  
-      h2 {
-        margin-bottom: 1rem; /* 16px */
-      }
-  
-      ul {
-        list-style-type: none;
-        padding: 0;
-  
-        li {
-          margin-bottom: 1.5rem; /* 24px */
-  
-          h3 {
-            margin: 0 0 0.5rem 0; /* 8px */
-          }
-  
-          p {
-            margin: 0;
-          }
-        }
-      }
-    }
-  
-    .skills {
-      width: 100%;
-  
-      h2 {
-        margin-bottom: 1rem; /* 16px */
-      }
-  
-      .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        gap: 2rem; /* 32px */
-  
-        .skill {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-  
-          img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 0.5rem; /* 8px */
-          }
-  
-          p {
-            margin: 0;
-            font-size: 1rem; /* 16px */
-          }
         }
       }
     }
   }
+
+  .skills {
+    width: 100%;
+
+    h2 {
+      margin-bottom: 1rem; /* 16px */
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 2rem; /* 32px */
+
+      .skill {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          width: 50px;
+          height: 50px;
+          margin-bottom: 0.5rem; /* 8px */
+        }
+
+        p {
+          margin: 0;
+          font-size: 1rem; /* 16px */
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    width: 100%;
+    padding: 1rem;
+
+    .intro {
+      flex-direction: column;
+      align-items: center;
+      img {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+      .description {
+        text-align: center;
+      }
+    }
+    .skills .skills-grid {
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 10px;
+    .intro .description h1 {
+      font-size: 1.5em;
+    }
+    .experiences h2,
+    .skills h2 {
+      font-size: 1.2em;
+    }
+    .experiences ul li h3,
+    .experiences ul li p,
+    .skills .skills-grid .skill p {
+      font-size: 0.9em;
+    }
+  }
+}

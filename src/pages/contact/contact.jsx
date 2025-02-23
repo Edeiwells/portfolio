@@ -97,7 +97,7 @@ const Contact = () => {
               <strong>Email:</strong> a.schmitt@epmistes.net
             </div>
             <div className="detail">
-              <strong>Phone:</strong> + 6 69 25 84 00
+              <strong>Phone:</strong> + 336 69 25 84 00
             </div>
             <div className="detail">
               <strong>Or leave directly a message through the form</strong>
